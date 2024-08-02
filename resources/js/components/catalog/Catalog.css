@@ -1,0 +1,30 @@
+/* src/components/catalog/Catalog.css */
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog {
+    flex: 1;
+    padding: 20px;
+    /* margin-bottom: 60px;  */
+}
+
+.catalog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.catalog-item {
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    box-sizing: border-box;
+}

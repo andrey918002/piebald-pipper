@@ -1,7 +1,8 @@
 import './Header.css';
-import { library } from '@fortawesome/fontawesome-svg-core';
+import Footer from "../footer/Footer";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping, faUser } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -20,24 +21,25 @@ const Header = () => {
                         </g>
                     </svg>
                     <nav className="nav container">
-                        <a href="#" className="nav__logo"><img  src="../../../public/img/ogo-removebg-preview-removebg-preview.png" alt="" className="logo__img" /></a>
+                        <a href="#" className="nav__logo"><img src="../../../assets/img/ogo-removebg-preview-removebg-preview.png" alt="" className="logo__img" /></a>
                         <ul className="nav__menu">
-                            <li className="menu__item"><a href="#" className="item__link">Home</a></li>
-                            <li className="menu__item"><a href="#" className="item__link">About</a></li>
-                            <li className="menu__item"><a href="#" className="item__link">Contact</a></li>
+                            <li className="menu__item"><Link to="/" className="item__link">Home</Link></li>
+                            <li className="menu__item"><Link to="/about" className="item__link">About</Link></li>
+                            <li className="menu__item"><Link to="/contact" className="item__link">Contact</Link></li>
+                            <li className="menu__item"><Link to="/catalog" className="item__link">Catalog</Link></li>
                         </ul>
                         <div className="nav__info">
-                            <a href="#" className="item__link menu__item">Сatalog</a>
                             <div className="info__shop">
-                                <a href="#" className="item__link"><FontAwesomeIcon icon={faCartShopping} /></a>
+                                <Link to="/profile" className='shop_link'><FontAwesomeIcon icon={faUser} style={{color: "#deddda",}} /></Link>
+                                <Link to="/cart" className="shop__link"><FontAwesomeIcon icon={faCartShopping} style={{color: "#deddda",}} /></Link>
                                 <span className='shop__score'></span>
                             </div>
                         </div>
                     </nav>
-                    <header className="header__info">
-                        <h1 className="info__title">piebald piper</h1>
+                    <div className="header__info">
+                        <h1 className="info__title">Pied Piper</h1>
                         <span className='info__subTitle'>electronics store</span>
-                    </header>
+                    </div>
                 </header>
             </div>
         </div>

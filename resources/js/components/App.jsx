@@ -1,13 +1,28 @@
-import React from 'react';
-import { useState } from 'react'
-import Header from "../components/Header/Header.jsx";
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Header from './header/Header';
+import About from './about/About';
+import Contact from './contact/Contact';
+import Catalog from './catalog/Catalog';
+import Cart from './cart/Cart';
+import Profile from './profile/Profile';
+import Footer from './footer/Footer';
 
+function App() {
+    const location = useLocation();
+    const showFooter = !['/catalog'].includes(location.pathname);
 
-const App = () => {
     return (
-        <div>
-            <h1><Header/></h1>
-        </div>
+        <>
+            <Routes>
+                <Route path="/" element={<Header />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/catalog" element={<Catalog />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/profile" element={<Profile />} />
+            </Routes>
+            {showFooter && <Footer />}
+        </>
     );
 }
 
