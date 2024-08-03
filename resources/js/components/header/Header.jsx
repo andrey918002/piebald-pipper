@@ -21,7 +21,7 @@ const Header = () => {
                         </g>
                     </svg>
                     <nav className="nav container">
-                        <a href="#" className="nav__logo"><img src="../../../assets/img/ogo-removebg-preview-removebg-preview.png" alt="" className="logo__img" /></a>
+                        <a href="#" className="nav__logo"><img src="/assets/img/ogo-removebg-preview-removebg-preview.png" alt="" className="logo__img" /></a>
                         <ul className="nav__menu">
                             <li className="menu__item"><Link to="/" className="item__link">Home</Link></li>
                             <li className="menu__item"><Link to="/about" className="item__link">About</Link></li>
