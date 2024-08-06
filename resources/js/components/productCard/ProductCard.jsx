@@ -1,4 +1,4 @@
-// src/components/productCard/ProductCard.jsx
+// src/components/ProductCard/ProductCard.jsx
 import './ProductCard.css';
 
 const ProductCard = ({ image, title, description }) => {
@@ -6,7 +6,7 @@ const ProductCard = ({ image, title, description }) => {
         <div className="product-card">
             <div className="product-card-inner">
                 <div className="product-card-front">
-                    <img src={image}  className="product-card-image"  alt=""/>
+                    <img src={image}  className="product-card-image" />
                 </div>
                 <div className="product-card-back">
                     <h3 className="product-card-title">{title}</h3>
@@ -19,3 +19,4 @@ const ProductCard = ({ image, title, description }) => {
 };
 
 export default ProductCard;
+
