@@ -1,13 +1,13 @@
 /* normalize css */
 *{
-    padding: 0;
-    margin: 0;
-    border: 0;
+	padding: 0;
+	margin: 0;
+	border: 0;
 }
 *, *:before, *:after{
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 :focus, :active{outline: none;}
 a:focus, a:active{outline: none;}
@@ -15,15 +15,16 @@ a:focus, a:active{outline: none;}
 nav,footer,header,aside{display: block;}
 
 html, body{
-    background-color: #fff;
-    height: 100%;
-    width: 100%;
-    font-style: 100%;
-    line-height: 1.5;
-    font-style: 14px;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+	 background-color: #fff;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	font-style: 100%;
+	line-height: 1.5;
+	font-style: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 }
 
 input, button, textarea{font-family: inherit;}
@@ -58,4 +59,23 @@ header {
 
 footer {
     flex-shrink: 0;
+}
+
+@media screen and (max-width: 1024px) {
+	html, body {
+		height: auto;
+		overflow: visible;
+	}
+	.catalog-title {
+		margin-top: 0;
+	}
+}
+@media screen and (max-width: 550px) {
+	.nav {
+		flex-direction: column;
+		gap: 5px;
+	}
+	.footer {
+		width: 100%;
+	}
 }
