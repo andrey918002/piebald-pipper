@@ -13,3 +13,7 @@ Route::get('/{path1}', function () {
 Route::get('/{path1}/{path2}', function () {
     return view('welcome');
 });
+
+//Route::get('/{pathMatch}', function (){
+//   return view('welcome');
+//})->where('pathMatch', ".*");

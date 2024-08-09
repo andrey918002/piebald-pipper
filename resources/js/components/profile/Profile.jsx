@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Profile.css';
 
 function Profile() {
@@ -38,9 +39,10 @@ function Profile() {
                             />
                             <button type="submit">Login</button>
                         </form>
-                        <button className="toggle-button" onClick={toggleCard}>
-                            Register
-                        </button>
+                        {/*<button className="toggle-button" onClick={toggleCard}>*/}
+                        {/*    Register*/}
+                        {/*</button>*/}
+                        <NavLink to="/registration" className="shop__link" onClick={toggleCard}>Reg</NavLink>
                     </div>
                     {/* Задняя сторона карточки (форма регистрации) */}
                     <div className="card-back">
@@ -63,9 +65,10 @@ function Profile() {
                             />
                             <button type="submit">Register</button>
                         </form>
-                        <button className="toggle-button" onClick={toggleCard}>
-                            Login
-                        </button>
+                        {/*<button className="toggle-button" onClick={toggleCard}>*/}
+                        {/*    Login*/}
+                        {/*</button>*/}
+                        <NavLink to="/login" className="shop__link" onClick={toggleCard}>Log</NavLink>
                     </div>
                 </div>
             </div>

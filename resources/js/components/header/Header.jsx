@@ -2,7 +2,7 @@ import './Header.css';
 import Footer from "../footer/Footer";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faUser } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -23,15 +23,15 @@ const Header = () => {
                     <nav className="nav container">
                         <a href="#" className="nav__logo"><img src="/assets/img/ogo-removebg-preview-removebg-preview.png" alt="" className="logo__img" /></a>
                         <ul className="nav__menu">
-                            <li className="menu__item"><Link to="/" className="item__link">Home</Link></li>
-                            <li className="menu__item"><Link to="/about" className="item__link">About</Link></li>
-                            <li className="menu__item"><Link to="/contact" className="item__link">Contact</Link></li>
-                            <li className="menu__item"><Link to="/catalog" className="item__link">Catalog</Link></li>
+                            <li className="menu__item"><NavLink to="/" className="item__link">Home</NavLink></li>
+                            <li className="menu__item"><NavLink to="/about" className="item__link">About</NavLink></li>
+                            <li className="menu__item"><NavLink to="/contact" className="item__link">Contact</NavLink></li>
+                            <li className="menu__item"><NavLink to="/catalog" className="item__link">Catalog</NavLink></li>
                         </ul>
                         <div className="nav__info">
                             <div className="info__shop">
-                                <Link to="/profile" className='shop_link'><FontAwesomeIcon icon={faUser} style={{color: "#deddda",}} /></Link>
-                                <Link to="/cart" className="shop__link"><FontAwesomeIcon icon={faCartShopping} style={{color: "#deddda",}} /></Link>
+                                <NavLink to="/login" className='shop_link'><FontAwesomeIcon icon={faUser} style={{color: "#deddda"}} /></NavLink>
+                                <NavLink to="/cart" className="shop__link"><FontAwesomeIcon icon={faCartShopping} style={{color: "#deddda"}} /></NavLink>
                                 <span className='shop__score'></span>
                             </div>
                         </div>
@@ -42,6 +42,7 @@ const Header = () => {
                     </div>
                 </header>
             </div>
+
         </div>
     );
 }

@@ -19,9 +19,8 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/catalog" element={<Catalog />} />
                 <Route path="/cart" element={<Cart />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/admin" element={<Header />}/>
-                <Route path="/admin/product" element={<Header />}/>
+                <Route path="/login" element={<Profile />} />
+                <Route path="/registration" element={<Profile />} />
             </Routes>
             {showFooter && <Footer />}
         </>

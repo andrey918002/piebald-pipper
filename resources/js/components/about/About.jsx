@@ -2,7 +2,10 @@
 import Header from '../header/Header';
 const About = () => {
     return(
-        <Header/>
+        <>
+            <Header/>
+            <h1>About</h1>
+        </>
     );
 };
 

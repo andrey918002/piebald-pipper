@@ -3,7 +3,10 @@ import Header from '../header/Header';
 
 const Contact = () => {
     return(
-        <Header/>
+        <>
+            <Header />
+            <h1>Contacts</h1>
+        </>
     );
 };
 

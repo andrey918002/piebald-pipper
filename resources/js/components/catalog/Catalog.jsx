@@ -15,7 +15,6 @@ const products = [
         title: 'Product 2',
         description: 'Description of Product 2',
     },
-
 ];
 
 const Catalog = () => {
@@ -23,7 +22,7 @@ const Catalog = () => {
         <>
             <Header/>
             <div className="catalog">
-                <h2>Product Catalog</h2>
+                <h2 className="catalog-title">Product Catalog</h2>
                 <div className="catalog-grid">
                     {products.map(product => (
                         <div className="catalog-item" key={product.id}>
