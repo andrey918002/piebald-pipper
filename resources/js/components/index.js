@@ -7,3 +7,4 @@ export {Contact} from '../pages/Contact/Contact';
 export {RegisterForm} from '../pages/Profile/RegisterForm';
 export {LoginForm} from '../pages/Profile/LoginForm';
 export {Footer} from './footer/Footer';
+export {Slider} from './Slider/Slider.jsx';

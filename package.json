@@ -25,6 +25,8 @@
         "add": "^2.0.6",
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-prettier": "^5.2.1",
+        "jquery": "^3.7.1",
+        "jQuery": "^1.7.4",
         "module-alias": "^2.2.3",
         "prettier": "^3.3.3",
         "prop-types": "^15.8.1",
