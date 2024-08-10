@@ -1,4 +1,4 @@
-export {ProductCard} from './ProductCard/ProductCard';
+export {ProductCard} from './productCard/ProductCard';
 export {Header} from '../pages/Header/Header';
 export {About} from '../pages/About/About';
 export {Cart} from '../pages/Cart/Cart';
@@ -6,4 +6,4 @@ export {Catalog} from '../pages/Catalog/Catalog';
 export {Contact} from '../pages/Contact/Contact';
 export {RegisterForm} from '../pages/Profile/RegisterForm';
 export {LoginForm} from '../pages/Profile/LoginForm';
-export {Footer} from './Footer/Footer';
+export {Footer} from './footer/Footer';

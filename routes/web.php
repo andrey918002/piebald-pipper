@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegistrationController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -13,6 +15,9 @@ Route::get('/{path1}', function () {
 Route::get('/{path1}/{path2}', function () {
     return view('welcome');
 });
+
+Route::post('/register', [RegistrationController::class, 'register']);
+Route::post('/login', [LoginController::class, 'login']);
 
 //Route::get('/{pathMatch}', function (){
 //   return view('welcome');
