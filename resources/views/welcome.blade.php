@@ -6,7 +6,8 @@
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <base href="{{ config('app.url') }}">
 
-        <title>Piebald-piper</title>
+        <link rel="shortcut icon" href="/assets/img/title_logo.jpg" />
+        <title>Pied-piper</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">

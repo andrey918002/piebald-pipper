@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller
 {
-    public function login(Request $request)
+    public function login(Request $request): array
     {
         try {
             $validator = Validator::make($request->all(), [

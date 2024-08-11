@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Validator;
 
 class RegistrationController extends Controller
 {
-    public function register(Request $request) {
+    public function register(Request $request): array {
         try {
             $validator = Validator::make($request->all(), [
                 'email'         => ['required', 'email'],
@@ -37,6 +37,7 @@ class RegistrationController extends Controller
             } else {
                 $user = User::create([
                     'name'      => '',
+                    'role'      => 'user',
                     'email'     => $request->get('email'),
                     'password'  => Hash::make($request->get('password'))
                 ]);
