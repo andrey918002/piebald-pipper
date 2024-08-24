@@ -40,7 +40,7 @@ export function LoginForm() {
         if(data.success) {
             localStorage.setItem('session_id', data.session_id);
 
-            goToHomePage();
+            navigate('/admin');
 
         } else {
             setError(data.message);

@@ -40,7 +40,7 @@ class LoginController extends Controller
 
             return [
                 'success'       => true,
-                'session_id'    => $request->session()->getId()
+                'session_id'    => $request->session()->token()
             ];
 
         } catch (Error $e) {

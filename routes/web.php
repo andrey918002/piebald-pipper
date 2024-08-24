@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\Admin\DashBoardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Middleware\CheckAdmin;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -22,8 +24,9 @@ Route::post('/login', [LoginController::class, 'login']);
 
 Route::post('/catalog', [ProductController::class, 'showProductList']);
 
-
-
+Route::group(['prefix' => 'admin', 'middleware' => CheckAdmin::class], function () {
+    Route::post('dashboard', [DashBoardController::class, 'dashboard']);
+});
 
 //Route::get('/{pathMatch}', function (){
 //   return view('welcome');

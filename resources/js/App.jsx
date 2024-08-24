@@ -2,6 +2,7 @@
 import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import {About, Cart, Catalog, Contact, Footer, RegisterForm, LoginForm, Header, Slider} from './components';
+import {Dashboard} from "./pages/Admin/Dashboard";
 
 function App() {
 	const location = useLocation();
@@ -16,6 +17,7 @@ function App() {
 		{ path: '/cart', element: <Cart /> },
 		{ path: '/login', element: <LoginForm /> },
 		{ path: '/register', element: <RegisterForm /> },
+		{ path: '/admin', element: <Dashboard /> },
 	];
 
 	return (
