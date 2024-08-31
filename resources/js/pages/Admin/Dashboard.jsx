@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {Header} from "./Header";
 import {Footer} from "./Footer";
+import {useNavigate} from "react-router-dom";
 
 export const Dashboard = () => {
-    const [name, setName] = useState('');
+    const navigate = useNavigate();
+    const [email, setEmail] = useState('');
 
     useEffect(() => {
             const headers = new Headers();
@@ -16,12 +18,16 @@ export const Dashboard = () => {
                 .then(res => res.json())
                 .then(
                     (result) => {
-                        console.log(result);
-                        setName(result.name);
+                        if (result.auth) {
+                            setEmail(result.user.email);
+                        } else {
+                            navigate('/login');
+                        }
                     },
                     (error) => {
                         console.log(error)
-                        //todo make permission denied page
+                        //todo error network or 500
+                        navigate('/login');
                     }
                 )
         },
@@ -32,7 +38,7 @@ export const Dashboard = () => {
         <>
             <Header />
             <h1>Dashboard</h1>
-            <div>{name}</div>
+            <div>{email}</div>
             <Footer />
         </>
     );

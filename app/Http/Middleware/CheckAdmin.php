@@ -8,6 +8,7 @@ use Illuminate\Contracts\Session\Session;
 use Illuminate\Cookie\CookieValuePrefix;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use function Symfony\Component\Console\Style\success;
 
 class CheckAdmin
 {
@@ -19,7 +20,7 @@ class CheckAdmin
     public function handle(Request $request, Closure $next): Response
     {
         if(!$this->tokensMatch($request)) {
-            return abort(401);
+            return response()->json(['auth' => false]);
         }
 
         return $next($request);
